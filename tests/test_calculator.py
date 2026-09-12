@@ -66,3 +66,6 @@ def test_percentage_zero():
 
 def test_percentage_hundred():
     assert percentage(200, 100) == 200
+
+def test_absolute_with_zero():
+    assert absolute(0) == 0
