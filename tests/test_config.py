@@ -1,0 +1,37 @@
+from src.config import (
+    DEFAULT_CONFIG,
+    get_config_value,
+    merge_config,
+)
+
+
+def test_default_timeout():
+    assert DEFAULT_CONFIG["timeout"] == 30
+
+
+def test_default_debug():
+    assert DEFAULT_CONFIG["debug"] is False
+
+
+def test_default_environment():
+    assert DEFAULT_CONFIG["environment"] == "development"
+
+
+def test_get_timeout():
+    assert get_config_value("timeout") == 30
+
+
+def test_get_debug():
+    assert get_config_value("debug") is False
+
+
+def test_get_environment():
+    assert get_config_value("environment") == "development"
+
+
+def test_merge_config():
+    result = merge_config(
+        {"timeout": 60}
+    )
+
+    assert result["timeout"] == 60

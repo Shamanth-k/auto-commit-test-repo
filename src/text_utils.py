@@ -1,17 +1,22 @@
-"""Text Utils utilities."""
-
-def normalize_text(text):
-    return " ".join(text.strip().split())
+def normalize_text(text: str) -> str:
+    return " ".join(text.strip().lower().split())
 
 
-def reverse_text(text):
+def reverse_text(text: str) -> str:
     return text[::-1]
 
 
-def word_count(text):
-    normalized = normalize_text(text)
+def word_count(text: str) -> int:
+    return len(text.split())
 
-    if not normalized:
-        return 0
 
-    return len(normalized.split())
+def uppercase_text(text: str) -> str:
+    return text.upper()
+
+
+def character_count(text: str) -> int:
+    return len(text)
+
+
+def contains_word(text: str, word: str) -> bool:
+    return word in text.split()

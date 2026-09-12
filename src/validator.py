@@ -1,21 +1,27 @@
-"""Validator utilities."""
-
-def is_valid_email(email):
-    if not isinstance(email, str):
-        return False
-
-    if not email:
-        return False
-
-    return "@" in email and "." in email.split("@")[-1]
+import re
 
 
-def is_valid_age(age):
-    if not isinstance(age, int):
-        return False
+def is_valid_email(email: str) -> bool:
+    pattern = r"^[^@\s]+@[^@\s]+\.[^@\s]+$"
+    return re.match(pattern, email) is not None
 
+
+def is_valid_age(age: int) -> bool:
     return 0 <= age <= 120
 
 
-def is_non_empty_string(value):
-    return isinstance(value, str) and bool(value.strip())
+def is_non_empty_string(value: str) -> bool:
+    return bool(value.strip())
+
+
+def is_valid_username(username: str) -> bool:
+    return username.isalnum() and len(username) >= 3
+
+
+def is_valid_phone(phone: str) -> bool:
+    digits = phone.replace("-", "").replace(" ", "")
+    return digits.isdigit() and len(digits) == 10
+
+
+def has_valid_password_length(password: str) -> bool:
+    return len(password) >= 8

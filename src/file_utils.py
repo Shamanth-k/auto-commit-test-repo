@@ -1,5 +1,3 @@
-"""File Utils utilities."""
-
 from pathlib import Path
 
 
@@ -17,3 +15,20 @@ def write_text_file(path: str, content: str) -> None:
 
 def get_file_size(path: str) -> int:
     return Path(path).stat().st_size
+
+
+def get_file_extension(path: str) -> str:
+    return Path(path).suffix
+
+
+def safe_read_text_file(path: str, default: str = "") -> str:
+    file = Path(path)
+
+    if not file.is_file():
+        return default
+
+    return file.read_text(encoding="utf-8")
+
+
+def get_file_name(path: str) -> str:
+    return Path(path).name
