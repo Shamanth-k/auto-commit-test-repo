@@ -13,9 +13,12 @@ def multiply(a: float, b: float) -> float:
     return a * b
 
 
+DIVISION_BY_ZERO_MESSAGE = "Cannot divide by zero"
+
+
 def divide(a: float, b: float) -> float:
     if b == 0:
-        raise ValueError("Cannot divide by zero")
+        raise ValueError(DIVISION_BY_ZERO_MESSAGE)
     return a / b
 
 
