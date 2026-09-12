@@ -1,3 +1,5 @@
+"""Utilities for common file operations."""
+
 from pathlib import Path
 
 
