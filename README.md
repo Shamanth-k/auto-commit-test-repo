@@ -19,3 +19,7 @@ Add a project structure section to README.md that explains the purpose of the re
 
 ## Add repository information
 Add a section to README.md describing the current repository contents.
+
+
+## Add development notes
+Add a development section to README.md explaining that automated development tasks are being tested.
