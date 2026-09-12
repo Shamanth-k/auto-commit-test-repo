@@ -11,3 +11,6 @@ def test_reverse_text():
 
 def test_word_count():
     assert word_count("hello world") == 2
+
+def test_word_count_empty_string():
+    assert word_count("") == 0
