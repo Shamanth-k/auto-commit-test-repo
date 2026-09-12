@@ -15,3 +15,7 @@ This section was added automatically by the development agent.
 
 ## Improve README documentation
 Add a project structure section to README.md that explains the purpose of the repository.
+
+
+## Add repository information
+Add a section to README.md describing the current repository contents.
