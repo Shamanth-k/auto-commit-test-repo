@@ -66,3 +66,7 @@ def test_username_empty():
     from src.validator import is_valid_username
 
     assert is_valid_username("") is False
+
+def test_password_length_boundary():
+    assert has_valid_password_length("1234567") is False
+    assert has_valid_password_length("12345678") is True
