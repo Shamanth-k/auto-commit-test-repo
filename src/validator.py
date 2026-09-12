@@ -18,9 +18,15 @@ def is_valid_username(username: str) -> bool:
     return username.isalnum() and len(username) >= 3
 
 
+PHONE_NUMBER_LENGTH = 10
+
+
 def is_valid_phone(phone: str) -> bool:
     digits = phone.replace("-", "").replace(" ", "")
-    return digits.isdigit() and len(digits) == 10
+    return (
+        digits.isdigit()
+        and len(digits) == PHONE_NUMBER_LENGTH
+    )
 
 
 def has_valid_password_length(password: str) -> bool:
