@@ -12,3 +12,6 @@ def test_contains_word_empty_word():
         "hello world",
         "",
     ) is False
+
+def test_uppercase_text_empty_string():
+    assert uppercase_text("") == ""
