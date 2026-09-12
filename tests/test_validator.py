@@ -57,3 +57,7 @@ def test_valid_password_length():
 
 def test_invalid_short_password():
     assert not has_valid_password_length("pass")
+
+def test_phone_invalid_length():
+    assert is_valid_phone("123456789") is False
+    assert is_valid_phone("12345678901") is False
