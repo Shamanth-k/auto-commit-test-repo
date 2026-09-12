@@ -14,3 +14,16 @@ A small Python utility project used for testing the autonomous Git development s
 ```bash
 python -m pytest
 ```
+
+## Configuration
+
+Configuration values are defined in `src/config.py`.
+
+The default configuration includes (example):
+
+- debug
+- timeout
+- max_retries
+- environment
+
+Use `get_config_value()` to retrieve a configuration value and `merge_config()` to apply overrides.
