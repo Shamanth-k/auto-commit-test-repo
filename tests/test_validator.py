@@ -61,3 +61,8 @@ def test_invalid_short_password():
 def test_phone_invalid_length():
     assert is_valid_phone("123456789") is False
     assert is_valid_phone("12345678901") is False
+
+def test_username_empty():
+    from src.validator import is_valid_username
+
+    assert is_valid_username("") is False
