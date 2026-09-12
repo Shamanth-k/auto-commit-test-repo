@@ -74,3 +74,6 @@ def test_multiply_by_zero():
     from src.calculator import multiply
 
     assert multiply(123, 0) == 0
+
+def test_percentage_fraction():
+    assert percentage(80, 12.5) == 10
