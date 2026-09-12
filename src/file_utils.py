@@ -37,3 +37,6 @@ def get_file_name(path: str) -> str:
 
 def get_file_size_mb(path: str) -> float:
     return get_file_size(path) / (1024 * 1024)
+
+def get_parent_directory(path: str) -> str:
+    return str(Path(path).parent)
