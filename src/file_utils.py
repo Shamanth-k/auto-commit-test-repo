@@ -34,3 +34,6 @@ def safe_read_text_file(path: str, default: str = "") -> str:
 
 def get_file_name(path: str) -> str:
     return Path(path).name
+
+def get_file_size_mb(path: str) -> float:
+    return get_file_size(path) / (1024 * 1024)

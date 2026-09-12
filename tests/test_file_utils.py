@@ -3,6 +3,7 @@ from src.file_utils import (
     read_text_file,
     write_text_file,
     get_file_size,
+    get_file_size_mb,
 )
 
 
@@ -39,3 +40,14 @@ def test_get_file_size(tmp_path):
     file.write_text("hello", encoding="utf-8")
 
     assert get_file_size(str(file)) == 5
+
+def test_get_file_size_mb(tmp_path):
+    file = tmp_path / "data.bin"
+
+    file.write_bytes(
+        b"a" * (1024 * 1024)
+    )
+
+    assert get_file_size_mb(
+        str(file)
+    ) == 1.0
