@@ -2,6 +2,7 @@
 
 
 DEFAULT_CONFIG = {
+    "feature_enabled": False,
     "debug": False,
     "timeout": 30,
     "max_retries": 3,

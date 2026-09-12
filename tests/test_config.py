@@ -35,3 +35,6 @@ def test_merge_config():
     )
 
     assert result["timeout"] == 60
+
+def test_feature_enabled_config():
+    assert get_config_value("feature_enabled") is False
