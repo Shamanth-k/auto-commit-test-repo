@@ -69,3 +69,8 @@ def test_percentage_hundred():
 
 def test_absolute_with_zero():
     assert absolute(0) == 0
+
+def test_multiply_by_zero():
+    from src.calculator import multiply
+
+    assert multiply(123, 0) == 0
