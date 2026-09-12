@@ -32,3 +32,7 @@ def absolute(value: float) -> float:
 
 def percentage(value: float, percent: float) -> float:
     return value * percent / 100
+
+
+def square(value: float) -> float:
+    return value * value
