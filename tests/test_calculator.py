@@ -1,6 +1,14 @@
 import pytest
 
-from src.calculator import add, subtract, multiply, divide
+from src.calculator import (
+    add,
+    subtract,
+    multiply,
+    divide,
+    power,
+    absolute,
+    percentage,
+)
 
 
 def test_add():
@@ -21,21 +29,40 @@ def test_divide():
 
 def test_divide_by_zero():
     with pytest.raises(ValueError):
-        divide(10, 0)   
-
-def test_divide_by_zero():
-    import pytest
-
-    with pytest.raises(ValueError):
         divide(10, 0)
 
-def test_add_negative_numbers():
-    assert add(-5, -3) == -8
+
+def test_power():
+    assert power(2, 3) == 8
 
 
-def test_subtract_negative_numbers():
-    assert subtract(-5, -3) == -2
+def test_power_zero_exponent():
+    assert power(10, 0) == 1
 
 
-def test_multiply_negative_numbers():
-    assert multiply(-5, -3) == 15
+def test_power_negative_exponent():
+    assert power(2, -2) == 0.25
+
+
+def test_absolute_positive():
+    assert absolute(5) == 5
+
+
+def test_absolute_negative():
+    assert absolute(-5) == 5
+
+
+def test_absolute_zero():
+    assert absolute(0) == 0
+
+
+def test_percentage():
+    assert percentage(200, 10) == 20
+
+
+def test_percentage_zero():
+    assert percentage(200, 0) == 0
+
+
+def test_percentage_hundred():
+    assert percentage(200, 100) == 200
