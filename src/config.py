@@ -1,3 +1,5 @@
+"""Config utilities."""
+
 DEFAULT_CONFIG = {
     "debug": False,
     "timeout": 30,

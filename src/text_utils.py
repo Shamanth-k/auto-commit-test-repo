@@ -1,3 +1,5 @@
+"""Text Utils utilities."""
+
 def normalize_text(text):
     return " ".join(text.strip().split())
 
