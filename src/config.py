@@ -2,6 +2,7 @@
 
 
 DEFAULT_CONFIG = {
+    "log_format": "%(levelname)s:%(message)s",
     "feature_enabled": False,
     "debug": False,
     "timeout": 30,

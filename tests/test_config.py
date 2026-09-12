@@ -38,3 +38,9 @@ def test_merge_config():
 
 def test_feature_enabled_config():
     assert get_config_value("feature_enabled") is False
+
+def test_log_format_config():
+    assert (
+        get_config_value("log_format")
+        == "%(levelname)s:%(message)s"
+    )
