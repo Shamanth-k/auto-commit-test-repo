@@ -5,6 +5,7 @@ from src.file_utils import (
     get_file_size,
     get_file_size_mb,
     get_parent_directory,
+    get_absolute_path,
 )
 
 
@@ -57,3 +58,9 @@ def test_get_parent_directory():
     assert get_parent_directory(
         "reports/data.csv"
     ) == "reports"
+
+def test_get_absolute_path():
+    from pathlib import Path
+
+    result = get_absolute_path("example.txt")
+    assert Path(result).is_absolute()

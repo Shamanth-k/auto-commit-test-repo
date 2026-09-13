@@ -40,3 +40,6 @@ def get_file_size_mb(path: str) -> float:
 
 def get_parent_directory(path: str) -> str:
     return str(Path(path).parent)
+
+def get_absolute_path(path: str) -> str:
+    return str(Path(path).resolve())
