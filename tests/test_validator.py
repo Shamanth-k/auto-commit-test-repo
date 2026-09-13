@@ -70,3 +70,6 @@ def test_username_empty():
 def test_password_length_boundary():
     assert has_valid_password_length("1234567") is False
     assert has_valid_password_length("12345678") is True
+
+def test_phone_with_spaces_and_dashes():
+    assert is_valid_phone("98765 43210") is True
