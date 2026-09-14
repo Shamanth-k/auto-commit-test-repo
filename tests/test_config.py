@@ -2,7 +2,8 @@ from src.config import (
     DEFAULT_CONFIG,
     get_config_value,
     merge_config,
-)
+
+    copy_config,)
 
 
 def test_default_timeout():
@@ -44,3 +45,10 @@ def test_log_format_config():
         get_config_value("log_format")
         == "%(levelname)s:%(message)s"
     )
+
+def test_copy_config():
+    original = {"timeout": 30}
+    copied = copy_config(original)
+
+    assert copied == original
+    assert copied is not original

@@ -19,3 +19,6 @@ def merge_config(overrides: dict) -> dict:
     config = DEFAULT_CONFIG.copy()
     config.update(overrides)
     return config
+
+def copy_config(config: dict) -> dict:
+    return config.copy()
