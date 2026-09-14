@@ -38,3 +38,7 @@ def percentage(value: float, percent: float) -> float:
 
 def square(value: float) -> float:
     return value * value
+
+
+def percentage_fraction(percent: float) -> float:
+    return percent / 100
