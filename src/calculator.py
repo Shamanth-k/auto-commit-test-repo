@@ -42,3 +42,11 @@ def square(value: float) -> float:
 
 def percentage_fraction(percent: float) -> float:
     return percent / 100
+
+
+def reciprocal(value: float) -> float:
+    if value == 0:
+        raise ValueError(
+            "Cannot calculate reciprocal of zero"
+        )
+    return 1 / value
