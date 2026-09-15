@@ -6,6 +6,7 @@ from src.file_utils import (
     get_file_size_mb,
     get_parent_directory,
     get_absolute_path,
+    read_text_lines,
 )
 
 
@@ -64,3 +65,17 @@ def test_get_absolute_path():
 
     result = get_absolute_path("example.txt")
     assert Path(result).is_absolute()
+
+def test_read_text_lines(tmp_path):
+    file = tmp_path / "lines.txt"
+
+    file.write_text(
+        "first\nsecond\nthird\n",
+        encoding="utf-8",
+    )
+
+    assert read_text_lines(str(file)) == [
+        "first",
+        "second",
+        "third",
+    ]

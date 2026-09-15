@@ -43,3 +43,8 @@ def get_parent_directory(path: str) -> str:
 
 def get_absolute_path(path: str) -> str:
     return str(Path(path).resolve())
+
+def read_text_lines(path: str) -> list[str]:
+    return Path(path).read_text(
+        encoding="utf-8"
+    ).splitlines()
