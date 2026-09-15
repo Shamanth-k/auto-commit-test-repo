@@ -52,3 +52,6 @@ def test_copy_config():
 
     assert copied == original
     assert copied is not original
+
+def test_cache_enabled_config():
+    assert get_config_value("cache_enabled") is True

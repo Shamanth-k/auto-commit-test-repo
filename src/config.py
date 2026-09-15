@@ -2,6 +2,7 @@
 
 
 DEFAULT_CONFIG = {
+    "cache_enabled": True,
     "log_format": "%(levelname)s:%(message)s",
     "feature_enabled": False,
     "debug": False,
