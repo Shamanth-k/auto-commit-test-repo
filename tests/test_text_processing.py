@@ -18,3 +18,9 @@ def test_uppercase_text_empty_string():
 
 def test_uppercase_text_mixed_case():
     assert uppercase_text("Hello World") == "HELLO WORLD"
+
+def test_contains_word_is_case_sensitive():
+    assert contains_word(
+        "Hello world",
+        "hello",
+    ) is False
