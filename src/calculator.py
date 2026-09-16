@@ -50,3 +50,11 @@ def reciprocal(value: float) -> float:
             "Cannot calculate reciprocal of zero"
         )
     return 1 / value
+
+
+def minimum(values: list[float]) -> float:
+    if not values:
+        raise ValueError(
+            "values cannot be empty"
+        )
+    return min(values)
