@@ -48,3 +48,6 @@ def read_text_lines(path: str) -> list[str]:
     return Path(path).read_text(
         encoding="utf-8"
     ).splitlines()
+
+def get_file_size_kb(path: str) -> float:
+    return get_file_size(path) / 1024

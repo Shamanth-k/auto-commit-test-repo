@@ -7,6 +7,7 @@ from src.file_utils import (
     get_parent_directory,
     get_absolute_path,
     read_text_lines,
+    get_file_size_kb,
 )
 
 
@@ -79,3 +80,14 @@ def test_read_text_lines(tmp_path):
         "second",
         "third",
     ]
+
+def test_get_file_size_kb(tmp_path):
+    file = tmp_path / "data.bin"
+
+    file.write_bytes(
+        b"a" * 2048
+    )
+
+    assert get_file_size_kb(
+        str(file)
+    ) == 2.0
