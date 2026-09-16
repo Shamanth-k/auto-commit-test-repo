@@ -2,6 +2,7 @@
 
 
 DEFAULT_CONFIG = {
+    "log_level": "INFO",
     "cache_enabled": True,
     "log_format": "%(levelname)s:%(message)s",
     "feature_enabled": False,
