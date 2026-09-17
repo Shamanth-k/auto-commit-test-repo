@@ -51,3 +51,6 @@ def read_text_lines(path: str) -> list[str]:
 
 def get_file_size_kb(path: str) -> float:
     return get_file_size(path) / 1024
+
+def is_file_empty(path: str) -> bool:
+    return Path(path).stat().st_size == 0

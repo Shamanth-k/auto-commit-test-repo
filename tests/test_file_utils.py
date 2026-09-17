@@ -8,6 +8,7 @@ from src.file_utils import (
     get_absolute_path,
     read_text_lines,
     get_file_size_kb,
+    is_file_empty,
 )
 
 
@@ -91,3 +92,13 @@ def test_get_file_size_kb(tmp_path):
     assert get_file_size_kb(
         str(file)
     ) == 2.0
+
+def test_is_file_empty(tmp_path):
+    empty_file = tmp_path / "empty.txt"
+    content_file = tmp_path / "content.txt"
+
+    empty_file.write_text("", encoding="utf-8")
+    content_file.write_text("data", encoding="utf-8")
+
+    assert is_file_empty(str(empty_file)) is True
+    assert is_file_empty(str(content_file)) is False
