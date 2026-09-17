@@ -24,3 +24,8 @@ def test_contains_word_is_case_sensitive():
         "Hello world",
         "hello",
     ) is False
+
+def test_normalize_text_unicode():
+    assert normalize_text(
+        "  Café   crème  "
+    ) == "café crème"
