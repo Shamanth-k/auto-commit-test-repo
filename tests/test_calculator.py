@@ -77,3 +77,8 @@ def test_multiply_by_zero():
 
 def test_percentage_fraction():
     assert percentage(80, 12.5) == 10
+
+def test_add_negative_numbers():
+    from src.calculator import add
+
+    assert add(-5, -3) == -8
