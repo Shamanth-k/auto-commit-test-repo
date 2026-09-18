@@ -73,3 +73,7 @@ def test_password_length_boundary():
 
 def test_phone_with_spaces_and_dashes():
     assert is_valid_phone("98765 43210") is True
+
+def test_username_minimum_length():
+    assert is_valid_username("abc") is True
+    assert is_valid_username("ab") is False
