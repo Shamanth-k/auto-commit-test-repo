@@ -2,6 +2,7 @@
 
 
 DEFAULT_CONFIG = {
+    "api_url": "https://api.example.com",
     "log_level": "INFO",
     "cache_enabled": True,
     "log_format": "%(levelname)s:%(message)s",

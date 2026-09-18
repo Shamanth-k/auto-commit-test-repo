@@ -58,3 +58,9 @@ def test_cache_enabled_config():
 
 def test_log_level_config():
     assert get_config_value("log_level") == "INFO"
+
+def test_api_url_config():
+    assert (
+        get_config_value("api_url")
+        == "https://api.example.com"
+    )
