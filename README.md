@@ -27,3 +27,8 @@ The default configuration includes (example):
 - environment
 
 Use `get_config_value()` to retrieve a configuration value and `merge_config()` to apply overrides.
+
+## Usage
+
+Import the project helpers from the `src` package and call the
+functions that match the operation you need.
