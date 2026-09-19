@@ -58,3 +58,23 @@ def minimum(values: list[float]) -> float:
             "values cannot be empty"
         )
     return min(values)
+
+
+def calculate(
+    operation: str,
+    a: float,
+    b: float,
+) -> float:
+    operations = {
+        "add": add,
+        "subtract": subtract,
+        "multiply": multiply,
+        "divide": divide,
+    }
+
+    if operation not in operations:
+        raise ValueError(
+            f"Unsupported operation: {operation}"
+        )
+
+    return operations[operation](a, b)
