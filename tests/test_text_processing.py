@@ -29,3 +29,6 @@ def test_normalize_text_unicode():
     assert normalize_text(
         "  Café   crème  "
     ) == "café crème"
+
+def test_reverse_text_empty_string():
+    assert reverse_text("") == ""
