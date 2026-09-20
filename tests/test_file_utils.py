@@ -9,6 +9,7 @@ from src.file_utils import (
     read_text_lines,
     get_file_size_kb,
     is_file_empty,
+    get_parent_name,
 )
 
 
@@ -102,3 +103,8 @@ def test_is_file_empty(tmp_path):
 
     assert is_file_empty(str(empty_file)) is True
     assert is_file_empty(str(content_file)) is False
+
+def test_get_parent_name():
+    assert get_parent_name(
+        "reports/data.csv"
+    ) == "reports"

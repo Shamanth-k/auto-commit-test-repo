@@ -54,3 +54,6 @@ def get_file_size_kb(path: str) -> float:
 
 def is_file_empty(path: str) -> bool:
     return Path(path).stat().st_size == 0
+
+def get_parent_name(path: str) -> str:
+    return Path(path).parent.name
