@@ -32,3 +32,13 @@ Use `get_config_value()` to retrieve a configuration value and `merge_config()` 
 
 Import the project helpers from the `src` package and call the
 functions that match the operation you need.
+
+## Installation
+
+Clone the repository and install the project dependencies:
+
+```bash
+git clone <repository-url>
+cd auto-commit-test-repo
+pip install -r requirements.txt
+```
