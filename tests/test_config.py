@@ -3,7 +3,8 @@ from src.config import (
     get_config_value,
     merge_config,
 
-    copy_config,)
+    copy_config,
+    validate_config,)
 
 
 def test_default_timeout():
@@ -64,3 +65,11 @@ def test_api_url_config():
         get_config_value("api_url")
         == "https://api.example.com"
     )
+
+def test_validate_config():
+    assert validate_config(DEFAULT_CONFIG) is True
+
+    invalid = DEFAULT_CONFIG.copy()
+    invalid["timeout"] = -1
+
+    assert validate_config(invalid) is False
