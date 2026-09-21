@@ -35,3 +35,6 @@ def test_reverse_text_empty_string():
 
 def test_reverse_text_single_character():
     assert reverse_text("x") == "x"
+
+def test_word_count_mixed_whitespace():
+    assert word_count("one\ttwo\nthree") == 3
