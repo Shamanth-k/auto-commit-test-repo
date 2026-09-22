@@ -77,3 +77,8 @@ def test_phone_with_spaces_and_dashes():
 def test_username_minimum_length():
     assert is_valid_username("abc") is True
     assert is_valid_username("ab") is False
+
+def test_age_negative():
+    from src.validator import is_valid_age
+
+    assert is_valid_age(-1) is False
