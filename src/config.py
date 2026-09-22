@@ -50,3 +50,11 @@ def validate_config(config: dict) -> bool:
         return False
 
     return True
+
+def get_required_config(key: str):
+    if key not in DEFAULT_CONFIG:
+        raise KeyError(
+            f"Missing required configuration: {key}"
+        )
+
+    return DEFAULT_CONFIG[key]
