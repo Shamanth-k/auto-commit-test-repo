@@ -82,3 +82,7 @@ def test_age_negative():
     from src.validator import is_valid_age
 
     assert is_valid_age(-1) is False
+
+def test_username_rejects_special_characters():
+    assert is_valid_username("user_name") is False
+    assert is_valid_username("user-name") is False
