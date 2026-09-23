@@ -57,3 +57,9 @@ def is_file_empty(path: str) -> bool:
 
 def get_parent_name(path: str) -> str:
     return Path(path).parent.name
+
+def delete_file(path: str) -> None:
+    file = Path(path)
+
+    if file.exists():
+        file.unlink()

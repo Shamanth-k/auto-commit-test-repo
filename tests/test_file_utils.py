@@ -10,6 +10,7 @@ from src.file_utils import (
     get_file_size_kb,
     is_file_empty,
     get_parent_name,
+    delete_file,
 )
 
 
@@ -108,3 +109,15 @@ def test_get_parent_name():
     assert get_parent_name(
         "reports/data.csv"
     ) == "reports"
+
+def test_delete_file(tmp_path):
+    file = tmp_path / "delete.txt"
+
+    file.write_text(
+        "data",
+        encoding="utf-8",
+    )
+
+    delete_file(str(file))
+
+    assert file.exists() is False
