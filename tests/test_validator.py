@@ -86,3 +86,6 @@ def test_age_negative():
 def test_username_rejects_special_characters():
     assert is_valid_username("user_name") is False
     assert is_valid_username("user-name") is False
+
+def test_email_with_whitespace():
+    assert is_valid_email(" user@example.com ") is False
