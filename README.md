@@ -42,3 +42,23 @@ git clone <repository-url>
 cd auto-commit-test-repo
 pip install -r requirements.txt
 ```
+
+## Project Structure
+
+The project is organized into source modules and tests. Example layout:
+
+```
+src/
+  calculator.py
+  text_utils.py
+  validator.py
+  config.py
+  file_utils.py
+
+tests/
+  test_calculator.py
+  test_text_utils.py
+  test_validator.py
+  test_config.py
+  test_file_utils.py
+```
