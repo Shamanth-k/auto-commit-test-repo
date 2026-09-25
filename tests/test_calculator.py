@@ -82,3 +82,6 @@ def test_add_negative_numbers():
     from src.calculator import add
 
     assert add(-5, -3) == -8
+
+def test_power_with_fractional_exponent():
+    assert power(9, 0.5) == 3
