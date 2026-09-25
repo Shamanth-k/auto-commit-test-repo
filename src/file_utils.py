@@ -63,3 +63,10 @@ def delete_file(path: str) -> None:
 
     if file.exists():
         file.unlink()
+
+def append_text_file(path: str, content: str) -> None:
+    with Path(path).open(
+        "a",
+        encoding="utf-8",
+    ) as file:
+        file.write(content)

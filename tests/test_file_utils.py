@@ -11,6 +11,7 @@ from src.file_utils import (
     is_file_empty,
     get_parent_name,
     delete_file,
+    append_text_file,
 )
 
 
@@ -121,3 +122,20 @@ def test_delete_file(tmp_path):
     delete_file(str(file))
 
     assert file.exists() is False
+
+def test_append_text_file(tmp_path):
+    file = tmp_path / "append.txt"
+
+    file.write_text(
+        "hello",
+        encoding="utf-8",
+    )
+
+    append_text_file(
+        str(file),
+        " world",
+    )
+
+    assert file.read_text(
+        encoding="utf-8"
+    ) == "hello world"
