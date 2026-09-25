@@ -38,3 +38,6 @@ def test_reverse_text_single_character():
 
 def test_word_count_mixed_whitespace():
     assert word_count("one\ttwo\nthree") == 3
+
+def test_reverse_text_unicode():
+    assert reverse_text("café") == "éfac"
