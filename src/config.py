@@ -2,6 +2,7 @@
 
 
 DEFAULT_CONFIG = {
+    "region": "local",
     "request_timeout": 15,
     "api_url": "https://api.example.com",
     "log_level": "INFO",

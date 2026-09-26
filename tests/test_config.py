@@ -93,3 +93,6 @@ def test_get_required_config():
 def test_config_key_exists():
     assert config_key_exists("timeout") is True
     assert config_key_exists("missing") is False
+
+def test_region_config():
+    assert get_config_value("region") == "local"
