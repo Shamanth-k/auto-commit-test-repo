@@ -41,3 +41,6 @@ def test_word_count_mixed_whitespace():
 
 def test_reverse_text_unicode():
     assert reverse_text("café") == "éfac"
+
+def test_character_count_empty_string():
+    assert character_count("") == 0
