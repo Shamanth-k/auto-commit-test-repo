@@ -59,3 +59,6 @@ def get_required_config(key: str):
         )
 
     return DEFAULT_CONFIG[key]
+
+def config_key_exists(key: str) -> bool:
+    return key in DEFAULT_CONFIG

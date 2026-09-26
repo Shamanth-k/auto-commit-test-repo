@@ -7,7 +7,8 @@ from src.config import (
 
     copy_config,
     validate_config,
-    get_required_config,)
+    get_required_config,
+    config_key_exists,)
 
 
 def test_default_timeout():
@@ -88,3 +89,7 @@ def test_get_required_config():
 
     with pytest.raises(KeyError):
         get_required_config("missing")
+
+def test_config_key_exists():
+    assert config_key_exists("timeout") is True
+    assert config_key_exists("missing") is False
