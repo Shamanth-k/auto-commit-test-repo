@@ -44,3 +44,6 @@ def test_reverse_text_unicode():
 
 def test_character_count_empty_string():
     assert character_count("") == 0
+
+def test_word_count_empty_string():
+    assert word_count("") == 0
