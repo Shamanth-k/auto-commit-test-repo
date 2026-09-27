@@ -1,3 +1,5 @@
+"""Text processing utilities."""
+
 NORMALIZED_SEPARATOR = " "
 
 
