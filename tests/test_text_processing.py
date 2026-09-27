@@ -47,3 +47,6 @@ def test_character_count_empty_string():
 
 def test_word_count_empty_string():
     assert word_count("") == 0
+
+def test_reverse_text_with_spaces():
+    assert reverse_text("hello world") == "dlrow olleh"
