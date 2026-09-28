@@ -50,3 +50,8 @@ def test_word_count_empty_string():
 
 def test_reverse_text_with_spaces():
     assert reverse_text("hello world") == "dlrow olleh"
+
+def test_normalize_text_preserves_punctuation():
+    assert normalize_text(
+        "  Hello,   World!  "
+    ) == "hello, world!"
