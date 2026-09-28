@@ -89,3 +89,6 @@ def test_username_rejects_special_characters():
 
 def test_email_with_whitespace():
     assert is_valid_email(" user@example.com ") is False
+
+def test_non_empty_string_whitespace():
+    assert is_non_empty_string("   ") is False
