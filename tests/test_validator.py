@@ -92,3 +92,8 @@ def test_email_with_whitespace():
 
 def test_non_empty_string_whitespace():
     assert is_non_empty_string("   ") is False
+
+def test_email_with_subdomain():
+    assert is_valid_email(
+        "user@mail.example.com"
+    ) is True
