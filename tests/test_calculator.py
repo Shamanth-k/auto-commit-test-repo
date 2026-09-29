@@ -85,3 +85,10 @@ def test_add_negative_numbers():
 
 def test_power_with_fractional_exponent():
     assert power(9, 0.5) == 3
+
+def test_divide_by_zero_raises():
+    import pytest
+    from src.calculator import divide
+
+    with pytest.raises(ValueError):
+        divide(10, 0)
