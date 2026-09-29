@@ -62,3 +62,9 @@ tests/
   test_config.py
   test_file_utils.py
 ```
+
+## Error Handling
+
+Helpers raise standard Python exceptions when an operation cannot
+be completed with the supplied input. Callers should validate
+inputs and handle expected exceptions where appropriate.
