@@ -83,3 +83,14 @@ def calculate(
 
 def round_value(value: float, digits: int = 2) -> float:
     return round(value, digits)
+
+
+def factorial(value: int) -> int:
+    if value < 0:
+        raise ValueError(
+            "Factorial is not defined for negative values"
+        )
+    result = 1
+    for number in range(2, value + 1):
+        result *= number
+    return result
