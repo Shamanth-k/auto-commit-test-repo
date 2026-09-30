@@ -70,3 +70,6 @@ def append_text_file(path: str, content: str) -> None:
         encoding="utf-8",
     ) as file:
         file.write(content)
+
+def get_file_extension_lower(path: str) -> str:
+    return Path(path).suffix.lower()

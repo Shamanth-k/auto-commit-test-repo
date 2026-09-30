@@ -12,6 +12,7 @@ from src.file_utils import (
     get_parent_name,
     delete_file,
     append_text_file,
+    get_file_extension_lower,
 )
 
 
@@ -139,3 +140,8 @@ def test_append_text_file(tmp_path):
     assert file.read_text(
         encoding="utf-8"
     ) == "hello world"
+
+def test_get_file_extension_lower():
+    assert get_file_extension_lower(
+        "Report.PDF"
+    ) == ".pdf"
