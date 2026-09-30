@@ -97,3 +97,8 @@ def test_email_with_subdomain():
     assert is_valid_email(
         "user@mail.example.com"
     ) is True
+
+def test_email_missing_at_symbol():
+    from src.validator import is_valid_email
+
+    assert is_valid_email("user.example.com") is False
