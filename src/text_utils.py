@@ -8,6 +8,7 @@ def normalize_text(text: str) -> str:
 
 
 def reverse_text(text: str) -> str:
+    """Return text with its characters reversed."""
     return text[::-1]
 
 
