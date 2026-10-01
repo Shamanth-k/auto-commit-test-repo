@@ -73,3 +73,6 @@ def append_text_file(path: str, content: str) -> None:
 
 def get_file_extension_lower(path: str) -> str:
     return Path(path).suffix.lower()
+
+def is_regular_file(path: str) -> bool:
+    return Path(path).is_file()

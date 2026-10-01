@@ -13,6 +13,7 @@ from src.file_utils import (
     delete_file,
     append_text_file,
     get_file_extension_lower,
+    is_regular_file,
 )
 
 
@@ -145,3 +146,22 @@ def test_get_file_extension_lower():
     assert get_file_extension_lower(
         "Report.PDF"
     ) == ".pdf"
+
+def test_is_regular_file(tmp_path):
+    file = tmp_path / "data.txt"
+    directory = tmp_path / "folder"
+
+    file.write_text(
+        "data",
+        encoding="utf-8",
+    )
+
+    directory.mkdir()
+
+    assert is_regular_file(
+        str(file)
+    ) is True
+
+    assert is_regular_file(
+        str(directory)
+    ) is False
