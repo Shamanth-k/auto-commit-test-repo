@@ -102,3 +102,8 @@ def test_email_missing_at_symbol():
     from src.validator import is_valid_email
 
     assert is_valid_email("user.example.com") is False
+
+def test_phone_rejects_letters():
+    from src.validator import is_valid_phone
+
+    assert is_valid_phone("98765abc210") is False
