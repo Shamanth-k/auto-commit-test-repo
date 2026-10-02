@@ -58,3 +58,6 @@ def test_normalize_text_preserves_punctuation():
 
 def test_contains_word_rejects_partial_match():
     assert contains_word("cat catalog", "at") is False
+
+def test_normalize_text_with_tabs():
+    assert normalize_text("\thello\tworld\n") == "hello world"
