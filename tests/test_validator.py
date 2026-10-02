@@ -107,3 +107,8 @@ def test_phone_rejects_letters():
     from src.validator import is_valid_phone
 
     assert is_valid_phone("98765abc210") is False
+
+def test_password_short_value():
+    from src.validator import has_valid_password_length
+
+    assert has_valid_password_length("short") is False
