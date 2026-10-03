@@ -94,3 +94,21 @@ def factorial(value: int) -> int:
     for number in range(2, value + 1):
         result *= number
     return result
+
+
+def median(values: list[float]) -> float:
+    if not values:
+        raise ValueError(
+            "values cannot be empty"
+        )
+
+    ordered = sorted(values)
+    middle = len(ordered) // 2
+
+    if len(ordered) % 2:
+        return ordered[middle]
+
+    return (
+        ordered[middle - 1]
+        + ordered[middle]
+    ) / 2
