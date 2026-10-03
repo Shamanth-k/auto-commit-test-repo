@@ -112,3 +112,7 @@ def median(values: list[float]) -> float:
         ordered[middle - 1]
         + ordered[middle]
     ) / 2
+
+
+def sum_values(values: list[float]) -> float:
+    return sum(values)
