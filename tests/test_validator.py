@@ -112,3 +112,6 @@ def test_password_short_value():
     from src.validator import has_valid_password_length
 
     assert has_valid_password_length("short") is False
+
+def test_username_with_four_characters():
+    assert is_valid_username("user") is True
