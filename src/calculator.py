@@ -116,3 +116,7 @@ def median(values: list[float]) -> float:
 
 def sum_values(values: list[float]) -> float:
     return sum(values)
+
+
+def cube(value: float) -> float:
+    return value * value * value
