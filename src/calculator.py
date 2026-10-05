@@ -1,4 +1,4 @@
-"""Calculator utilities."""
+"""Basic arithmetic utilities for numeric values."""
 
 
 def add(a: float, b: float) -> float:
