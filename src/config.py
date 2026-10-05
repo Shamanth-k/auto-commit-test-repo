@@ -63,3 +63,6 @@ def get_required_config(key: str):
 
 def config_key_exists(key: str) -> bool:
     return key in DEFAULT_CONFIG
+
+def build_config() -> dict:
+    return DEFAULT_CONFIG.copy()

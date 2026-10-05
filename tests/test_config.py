@@ -8,7 +8,8 @@ from src.config import (
     copy_config,
     validate_config,
     get_required_config,
-    config_key_exists,)
+    config_key_exists,
+    build_config,)
 
 
 def test_default_timeout():
@@ -96,3 +97,9 @@ def test_config_key_exists():
 
 def test_region_config():
     assert get_config_value("region") == "local"
+
+def test_build_config():
+    config = build_config()
+
+    assert config == DEFAULT_CONFIG
+    assert config is not DEFAULT_CONFIG
