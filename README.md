@@ -104,3 +104,13 @@ normalize_text("  Hello   World  ")
 reverse_text("hello")
 word_count("one two three")
 ```
+
+## API Reference
+
+The public helpers are grouped by module:
+
+- `src.calculator` for arithmetic operations.
+- `src.text_utils` for text processing.
+- `src.validator` for input validation.
+- `src.config` for configuration helpers.
+- `src.file_utils` for file operations.
