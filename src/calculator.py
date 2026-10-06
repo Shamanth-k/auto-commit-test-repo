@@ -120,3 +120,11 @@ def sum_values(values: list[float]) -> float:
 
 def cube(value: float) -> float:
     return value * value * value
+
+
+def maximum(values: list[float]) -> float:
+    if not values:
+        raise ValueError(
+            "values cannot be empty"
+        )
+    return max(values)
