@@ -115,3 +115,8 @@ def test_password_short_value():
 
 def test_username_with_four_characters():
     assert is_valid_username("user") is True
+
+def test_email_missing_domain():
+    from src.validator import is_valid_email
+
+    assert is_valid_email("user@") is False
