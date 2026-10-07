@@ -17,8 +17,14 @@ def is_non_empty_string(value: str) -> bool:
     return bool(value.strip())
 
 
+USERNAME_MIN_LENGTH = 3
+
+
 def is_valid_username(username: str) -> bool:
-    return username.isalnum() and len(username) >= 3
+    return (
+        username.isalnum()
+        and len(username) >= USERNAME_MIN_LENGTH
+    )
 
 
 PHONE_NUMBER_LENGTH = 10
