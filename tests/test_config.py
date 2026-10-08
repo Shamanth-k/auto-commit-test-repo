@@ -103,3 +103,6 @@ def test_build_config():
 
     assert config == DEFAULT_CONFIG
     assert config is not DEFAULT_CONFIG
+
+def test_environment_name_config():
+    assert get_config_value("environment_name") == "local"

@@ -2,6 +2,7 @@
 
 
 DEFAULT_CONFIG = {
+    "environment_name": "local",
     "region": "local",
     "request_timeout": 15,
     "api_url": "https://api.example.com",
