@@ -124,3 +124,19 @@ A typical development cycle is:
 3. Run `python -m pytest`.
 4. Review the Git diff.
 5. Commit the change with a clear message.
+
+## Validator Examples
+
+Validation helpers are available from `src.validator`:
+
+```python
+from src.validator import (
+    is_valid_email,
+    is_valid_age,
+    is_valid_username,
+)
+
+is_valid_email("user@example.com")
+is_valid_age(25)
+is_valid_username("developer")
+```
