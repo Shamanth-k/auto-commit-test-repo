@@ -114,3 +114,13 @@ The public helpers are grouped by module:
 - `src.validator` for input validation.
 - `src.config` for configuration helpers.
 - `src.file_utils` for file operations.
+
+## Development Workflow
+
+A typical development cycle is:
+
+1. Make a focused change.
+2. Add or update tests.
+3. Run `python -m pytest`.
+4. Review the Git diff.
+5. Commit the change with a clear message.
