@@ -15,6 +15,7 @@ from src.file_utils import (
     get_file_extension_lower,
     is_regular_file,
     ensure_directory,
+    get_file_stem,
 )
 
 
@@ -173,3 +174,7 @@ def test_ensure_directory(tmp_path):
     ensure_directory(str(directory))
 
     assert directory.is_dir()
+
+def test_get_file_stem():
+    assert get_file_stem("reports/data.csv") == "data"
+    assert get_file_stem("README") == "README"

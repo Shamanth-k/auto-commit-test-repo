@@ -83,3 +83,6 @@ def ensure_directory(path: str) -> None:
         parents=True,
         exist_ok=True,
     )
+
+def get_file_stem(path: str) -> str:
+    return Path(path).stem
