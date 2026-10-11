@@ -14,6 +14,7 @@ from src.file_utils import (
     append_text_file,
     get_file_extension_lower,
     is_regular_file,
+    ensure_directory,
 )
 
 
@@ -165,3 +166,10 @@ def test_is_regular_file(tmp_path):
     assert is_regular_file(
         str(directory)
     ) is False
+
+def test_ensure_directory(tmp_path):
+    directory = tmp_path / "nested" / "folder"
+
+    ensure_directory(str(directory))
+
+    assert directory.is_dir()

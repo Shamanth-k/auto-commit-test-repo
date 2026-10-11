@@ -77,3 +77,9 @@ def get_file_extension_lower(path: str) -> str:
 
 def is_regular_file(path: str) -> bool:
     return Path(path).is_file()
+
+def ensure_directory(path: str) -> None:
+    Path(path).mkdir(
+        parents=True,
+        exist_ok=True,
+    )
