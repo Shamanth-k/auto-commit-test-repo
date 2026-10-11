@@ -140,3 +140,19 @@ is_valid_email("user@example.com")
 is_valid_age(25)
 is_valid_username("developer")
 ```
+
+## File Utilities Examples
+
+File helpers are available from `src.file_utils`:
+
+```python
+from src.file_utils import (
+    file_exists,
+    read_text_file,
+    write_text_file,
+)
+
+write_text_file("example.txt", "hello")
+file_exists("example.txt")
+read_text_file("example.txt")
+```
