@@ -156,3 +156,17 @@ write_text_file("example.txt", "hello")
 file_exists("example.txt")
 read_text_file("example.txt")
 ```
+
+## Calculator Examples
+
+Calculator functions can be imported from `src.calculator`:
+
+```python
+from src.calculator import add, multiply, divide
+
+add(2, 3)
+multiply(4, 5)
+divide(10, 2)
+```
+
+Division by zero raises `ValueError`.
