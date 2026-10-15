@@ -106,3 +106,9 @@ def test_build_config():
 
 def test_environment_name_config():
     assert get_config_value("environment_name") == "local"
+
+def test_database_timeout_config():
+    assert (
+        get_config_value("database_timeout")
+        == 10
+    )
