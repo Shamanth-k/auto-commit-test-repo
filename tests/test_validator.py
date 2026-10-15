@@ -124,3 +124,6 @@ def test_email_missing_domain():
 def test_age_upper_boundary():
     assert is_valid_age(120) is True
     assert is_valid_age(121) is False
+
+def test_password_exactly_eight_characters():
+    assert has_valid_password_length("12345678") is True
